@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friends-filter</title>
+    <link rel="stylesheet" href="css/style.css" type="text/html">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <script src="http://vk.com/js/api/openapi.js" type="text/javascript"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="container-wrapper">
+        <div class="header">
+            <p class="header__title">Выберите друзей</p>
+            <button class="header__close button-reset"></button>
+        </div>
+
+        <div class="search">
+            <input class="input_search input-friends-vk" type="text" placeholder="Начните вводить имя друга">
+            <input class="input-friends-save" type="text" placeholder="Название">
+        </div>
+
+        <div class="filter">
+            <div class="left-column">
+                <p class="filter__title">Ваши друзья</p>
+                <div class="friends-wrapper friends-wrapper_left"></div>
+            </div>
+            <div class="right-column">
+                <p class="filter__title">Друзья в списке</p>
+                <div class="friends-wrapper friends-wrapper_right"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button class="button-save js-button">Сохранить</button>
+        </div>
+
+    </div>
+</div>
+
+<script id="user-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="friends-item" draggable="true" data-id="{{id}}">
+        <div class="friends-item__img">
+            <img src="{{photo_100}}" alt="{{first_name}}">
+        </div>
+        <div class="friends-item__title">
+            <p>{{first_name}} {{ last_name}}</p>
+        </div>
+        <div class="friends-item__button">
+            <button class="button button-item js-button"></button>
+        </div>
+    </div>
+    {{/each}}
+</script>
+
+</body>
+</html>

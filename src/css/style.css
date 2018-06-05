@@ -1,0 +1,255 @@
+body {
+    position: relative;
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    background: #dcdcdc;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a:active,
+a:visited,
+a:focus {
+    text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    margin: 100px auto;
+    width: 620px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.header {
+    height: 55px;
+    background-color: #ff8663;
+    border-radius: 10px 10px 0 0;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 18px;
+}
+
+.header__close {
+    background-position: center;
+    background-image: url("/assets/img/ic-close.png");
+}
+
+.search {
+    height: 55px;
+    background-color: #f0f0f0;
+    padding: 0 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search input {
+    height: 25px;
+    width: 48%;
+    padding-left: 25px;
+    font-size: 12px;
+    color: #000;
+    font-family: inherit;
+    font-weight: 300;
+    border-radius: 30px;
+    border: none;
+}
+
+.input_search {
+    background-repeat: no-repeat;
+    background-image: url("/assets/img/ic-search.png");
+    background-position: 8px center;
+}
+
+.filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+.left-column, .right-column {
+    width: 50%;
+}
+
+.left-column {
+    padding-right: 15px;
+    position: relative;
+}
+
+.left-column::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: -1px;
+    width: 1px;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+.filter__title {
+    margin: 0;
+    margin-top: 13px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.friends-wrapper {
+    max-height: 320px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.friends-item {
+    height: 70px;
+    overflow: hidden;
+    cursor: move;
+
+    display: flex;
+    align-items: center;
+}
+
+.friends-item:hover {
+    background-color: #f0f0f0;
+}
+
+.friends-item_active {
+    background-color: #f0f0f0;
+}
+
+.friends-item__img {
+    display: flex;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.friends-item__img img {
+    margin: auto;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.friends-item__title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    color: #4f4f4f;
+}
+
+.friends-item__title p {
+    padding-left: 10px;
+}
+
+.friends-item__button {
+    display: flex;
+    margin-left: auto;
+    margin-right: 7px;
+}
+
+.button {
+    position: relative;
+    border: none;
+    background-color: transparent;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+}
+
+.button::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(0deg);
+    -moz-transform: translateY(-50%) rotate(0deg);
+    -o-transform: translateY(-50%) rotate(0deg);
+    transform: translateY(-50%) rotate(0deg);
+    right: 0;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/assets/img/icon-add-friends.png");
+}
+
+.right-column {
+    padding-left: 15px;
+}
+
+.right-column .button::after {
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -moz-transform: translateY(-50%) rotate(45deg);
+    -o-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.footer {
+    height: 65px;
+    background-color: #f0f0f0;
+    padding: 0 15px;
+    border-radius: 0 0 10px 10px;
+
+    display: flex;
+    align-items: center;
+}
+
+.footer button {
+    width: 90px;
+    height: 40px;
+    margin-left: auto;
+    color: #fff;
+    font-weight: 300;
+    font-family: inherit;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff8663;
+}
+
+.button-reset {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: none;
+}
+
+.p {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.hidden {
+    display: none;
+}
